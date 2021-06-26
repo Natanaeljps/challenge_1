@@ -1,67 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 html{
-  background-color: hsl(233, 47%, 7%);
-  color: hsl(0, 0%, 100%);
-}
-
-h1{
-
-}
-
-.attribution {
-  font-size: 1.8em; 
-  text-align: center; }
-
-  /*===IMAGE===*/
-  img{
-    width: 100%;
-    height: auto;
-    border-radius: .5rem .5rem 0 0;
-  }
+  background-color: var(--background-color);
+  color: var(--title-color);
+  font-size: 1rem; 
+  text-align: center; 
   
+  }
+/* ====== Image ======= */
+#image img{
+  opacity: 55%;
+  filter: contrast(1);
+  width: 100%;
+  height: auto;
+  border-radius: 0.63rem 0.63rem 0 0;
+  padding: 0rem;
+  }
 
-  body{
-    margin-top: 6rem;
-    margin-bottom: 6rem;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+  .container #image{
+    background: var(--logo-color);
+    border-radius: 0.63rem 0.63rem 0 0;    
+  }
 
-    border-radius: 0.5rem;
-    text-align: center;
-    background-color: hsl(244, 38%, 16%);
+/* ====== Body ======= */
+#page{
+  background: var(--body-color);
+  border-radius: 0 0 0.63rem  0.63rem;
+  margin: 6rem 2.5rem;
+   
+}
+   /* ====== Variables ======= */
+:root{
+
+  --margin: 0.8rem 4rem;
+
+  /* ====== Colors ======= */
+  --title-color: hsl( 0, 0%, 100%);
+  --logo-color: hsl(277, 64%, 61%);
+  --text-color: hsla(0, 0%, 100%, 0.75);
+  --background-color: hsl(233, 47%, 7%);
+  --body-color: hsl(244, 38%, 16%);
+  --main-background-color: hsl(233, 47%, 7%);
+  --stat-headings-color: hsla(0, 0%, 100%, 0.6);
+
+  /* ====== Fonts ======= */
+  --title-font: 700 2rem 'Inter', sans-serif;
+  --text-font: 400 1.2rem 'Inter', sans-serif;
+  --text-font-cards: 500 1rem 'Lexend+Deca', sans-serif;
+  --card-font: 700 2rem 'Inter', sans-serif;
+}
+
+  /* ====== Title ======= */
+#title h1{
+  font: var(--title-font);
+  padding: var(--margin); 
+}
+
+#title span{
+  color: var(--logo-color);
+}
+
+/* ====== Text ======= */
+p{
+  font: var(--text-font);  
+  color: var(--text-color);
+  padding: var(--margin);
+  line-height: 1.6rem;
+  line-break:auto;
+  padding-bottom: 1rem;
+ }
+
+ /* ====== Cards ======= */
+
+ #cards{
+   padding-bottom: 2rem;
+ }
+
+ #cards span{  
+  font: var(--card-font);
+  color: var(--title-color);            
+    }
+
+ #cards .card{
+ font: var(--text-font-cards);
+  color: var(--text-color);
+  line-height: 2rem;  
+}
+
+ .card{
+  padding-top: 2.2rem;
+}
+
+  /* ====== Footer ======= */
+
+  body footer #footer{
+  text-align: center;
+  }
+ 
+/*========MEDIA QUERIES========*/
+/* EXTRA LARGE DEVICES: > 1440 */
+
+@media (min-width: 1440px) {
+
+  :root{
+     /* ====== Fonts ======= */
+  --title-font: 700 2rem 'Inter', sans-serif;
+  --text-font: 400 1rem 'Inter', sans-serif;   
+  --text-font-cards: 500 0.8rem 'Lexend+Deca', sans-serif;
+  --card-font: 700 1.5rem 'Inter', sans-serif;
+}
+  
+  #page{
+    border-radius: 0.63rem;    
+    margin: 10rem 8rem 8rem 10rem;
+    padding: 0rem;
   }
 
   .container{
+    display: flex;
+    text-align: left;
     
   }
+  .container #image img{
+    width: 35rem;
+    height: 28.5rem;
+    border-radius: 0 0.63rem 0.63rem 0;  
+  }
 
+  #image{
+    padding-left: 0rem;
+  }
 
- /*===TITLE===*/
-  .title{
-    font: 700 1.875rem 'inter', sans-serif;
+  .container #image{
+    border-radius: 0 0.63rem 0.63rem 0;    
+  }
+
+  .container #image{
+    order: 1;    
+  }
+
+    .container .text{
+    padding-top: 3rem;
+    padding-right: 5rem;
+    order: 0;    
+  }
+
+  .container #cards .card{
+    display: inline-block;
+    padding-right: 0rem;
+    padding-top: 5rem;
+  }
+
+  #cards span{  
+    font: var(--card-font);
+    color: var(--title-color);            
+  }
+  
+   #cards .card{
+    font: var(--text-font-cards);
+    color: var(--text-color);
+    line-height: 1.5rem;
+  }
+
+    body footer #footer{
+    display: inline-block;  
+  }
+}
+
+/*========MEDIA QUERIES========*/
+/* EXTRA LARGE DEVICES: > 1300*/
+
+@media (min-width: 1300px) {
+
+  :root{
+     /* ====== Fonts ======= */
+  --title-font: 700 2rem 'Inter', sans-serif;
+  --text-font: 400 1rem 'Inter', sans-serif;   
+  --text-font-cards: 500 0.8rem 'Lexend+Deca', sans-serif;
+  --card-font: 700 1.5rem 'Inter', sans-serif;
+}
+  
+  #page{
+    border-radius: 0.63rem;    
+    margin: 10rem 8rem 8rem 10rem;
+    padding: 0rem;
+  }
+
+  .container{
+    display: flex;
+    text-align: left;
     
   }
-
-  span{
-    color: hsl(277, 64%, 61%);
+  .container #image img{
+    width: 35rem;
+    height: 28.5rem;
+    border-radius: 0 0.63rem 0.63rem 0;  
   }
 
-  /*===TEXT===*/
-  .section{
-    margin-top: 50px;
-    font-size: 11px; 
-    text-align: center;
+  #image{
+    padding-left: 0rem;
   }
 
-  .text {
-    font: 400 1rem 'Lexend+', sans-serif;
-    color: hsla(0, 0%, 100%, 0.75);
-    margin: 1.5rem;
-
-
+  .container #image{
+    border-radius: 0 0.63rem 0.63rem 0;    
   }
 
+  .container #image{
+    order: 1;    
+  }
 
+    .container .text{
+    padding-top: 3rem;
+    padding-right: 5rem;
+    order: 0;    
+  }
 
-  /*===IMAGE===*/
+  .container #cards .card{
+    display: inline-block;
+    padding-right: 0rem;
+    padding-top: 5rem;
+  }
 
+  #cards span{  
+    font: var(--card-font);
+    color: var(--title-color);            
+  }
+  
+   #cards .card{
+    font: var(--text-font-cards);
+    color: var(--text-color);
+    line-height: 1.5rem;
+  }
+
+    body footer #footer{
+    display: inline-block;  
+  }
+}
